@@ -1,7 +1,7 @@
 <div class="row box-shadow">
 	<div class="col-xs-5 col-sm-4 no-padding">
 		<a href="<?php echo $post->permalink; ?>">
-			<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+			<?php echo get_the_post_thumbnail( $post->ID, 'thumb-square' ); ?>
 		</a>
 	</div><!-- end col -->
 	<div class="col-xs-7 col-sm-8 no-padding">

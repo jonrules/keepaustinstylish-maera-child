@@ -17,6 +17,11 @@ function maera_child_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'maera_child_scripts' );
 
+function maera_child_setup() {
+	add_image_size( 'thumb-square', 237, 192, array( 'center', 'top' ) );
+}
+add_action( 'after_setup_theme', 'maera_child_setup' );
+
 // function maera_child_widgets_context( $context ) {
 // 	$context['left_sidebar'] = Timber::get_widgets( 'left_sidebar' );
 // 	return $context;
