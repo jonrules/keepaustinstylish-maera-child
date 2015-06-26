@@ -1,0 +1,242 @@
+/*
+Theme Name:		 Maera Child
+Theme URI:		  http://patternsinthecloud.com
+Description:		Maera child theme
+Template:		   maera
+Version:			1.0.0
+Author:			 patternsinthecloud
+Author URI:		 http://patternsinthecloud.com
+License:			GPL v2 License
+License URI:		http://www.gnu.org/licenses/gpl.html
+Tags:			   dark, light, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, microformats, rtl-language-support, holiday, seasonal
+Text Domain:		maera-child
+*/
+
+#posts-peek-content {
+	display: none;
+	width: 100%;
+	min-height: 100%;
+	background: rgba(0, 0, 0, 1.0);
+	color: white;
+	z-index: 10000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+#posts-peek-content .navbar-header {
+	float: none !important;
+}
+
+#posts-peek-content .navbar-header .navbar-toggle {
+	display: block !important;
+}
+
+#posts-peek-content .navbar-header button {
+	color: #5b5b5b;
+}
+
+#posts-peek-content .categories-list a,
+#posts-peek-content .categories-list h2,
+#posts-peek-content .categories-content a,
+#posts-peek-content .categories-content h2,
+#posts-peek-content .footer a {
+	color: white;
+}
+
+#posts-peek-content .categories-list {
+	padding: 0;
+	position: relative;
+	height: 60px;
+	white-space: nowrap;
+}
+
+#posts-peek-content .categories-scroller {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#posts-peek-content .categories-list .category-link {
+	margin-right: 10px;
+	display: inline-block;
+}
+
+#posts-peek-content .categories-list .category-link.active {
+	text-decoration: underline;
+}
+
+#posts-peek-content .posts-list {
+	display: none;
+}
+
+#posts-peek-content .posts-list.active {
+	display: block;
+}
+
+/* Posts Layout Results Styles */
+
+.lib-panel {
+	margin-bottom: 20px;
+}
+.lib-panel img {
+	width: 100%;
+	background-color: transparent;
+}
+
+.lib-panel .row,
+.lib-panel .col-md-6 {
+	padding: 0;
+	background-color: #FFFFFF;
+}
+
+
+.lib-panel .lib-row {
+	padding: 0 20px 0 20px;
+}
+
+.lib-panel .lib-row.lib-header h2 {
+	font-size: 20px;
+	padding: 10px 0;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+
+.lib-panel .lib-row.lib-desc {
+	position: relative;
+	display: block;
+	font-size: 13px;
+}
+.lib-panel .lib-row.lib-desc a{
+	line-height: 1rem;
+	color: #000;
+	
+	
+}
+
+.row-margin-bottom {
+	margin-bottom: 20px;
+}
+
+.box-shadow {
+	border: 1px solid #dddddd;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.lib-hashtags {
+	overflow: hidden;
+	white-space: nowrap;
+	border: none;
+	background: none;
+	padding:0;
+	margin:0;
+	position: relative;
+}
+
+.lib-hashtags .post-hashtags-scroller {
+	overflow-x: scroll;
+}
+
+.lib-hashtags .post-hashtags-scroller::-webkit-scrollbar {
+	display: none;
+}
+
+.lib-hashtags .post-hashtags-scroller::-moz-scrollbar {
+	display: none;
+}
+
+.lib-hashtags  .post-hashtags {
+	margin:0 0 20px 0;
+}
+
+.lib-hashtags .white-right {
+	position:absolute;
+	right:0;
+	height:100%;
+	width:40px;
+	display: block;
+	background: rgba(255,255,255,0);
+	background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.46) 30%, rgba(255,255,255,1) 65%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(30%, rgba(255,255,255,0.46)), color-stop(65%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.46) 30%, rgba(255,255,255,1) 65%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.46) 30%, rgba(255,255,255,1) 65%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.46) 30%, rgba(255,255,255,1) 65%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.46) 30%, rgba(255,255,255,1) 65%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+}
+
+ul.post-hashtags {
+	margin:30px 0;
+	padding:0;
+	list-style: none;
+}
+
+.post-hashtags li {
+	display: inline-block;
+	font-style: italic;
+	margin-right:10px;
+}
+
+.post-hashtags li a {
+	padding: 5px;
+	background-color: #000;
+	color: #FFF;
+}
+
+.post-hashtags li a:before {
+	content: "#"; 
+}
+
+.navbar-social {
+	background-color:#000;
+	width: 100%;
+}
+
+.navbar-social ul {
+}
+
+.navbar-social ul li {
+	display: inline-block;
+	text-align: center;
+	width:24%;
+	margin:0 !important;
+	padding:0;
+}
+
+.navbar-social ul li a {
+	padding:20px;
+	border: none;
+	color: #FFF;
+}
+
+.black-alpha {
+	background-color: rgba(0,0,0,0.8);
+}
+
+.padding-0 {
+	padding: 0 !important;
+}
+
+.margin-bottom-0 {
+	margin-bottom: 0 !important;
+}
+
+.infinite-scroll-container .pager {
+	display: none;
+}
+
+.infinite-scroll-container {
+	padding-bottom: 60px;
+}
+
+.infinite-scroll-container.loading {
+	background: url('images/infinite-scroll-loading.svg') center bottom no-repeat;
+	background-size: 60px 60px;
+}

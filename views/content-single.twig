@@ -1,0 +1,21 @@
+<article {{ function( 'post_class' ) }} id="post-{{post.ID}}" itemscope itemtype="http://schema.org/Article">
+	<div class="blog-header">
+		<h1 class="blog-title">{{ post.title }}</h1>
+		<div class="lib-row lib-hashtags">
+			<div class="white-right"></div>
+			<div class="post-hashtags-scroller">
+				<ul class="post-hashtags">
+					{% for tag in post.tags %}
+						<li><a href="{{ tag.link }}">{{ tag.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="blog-post">
+		{{ post.content }}
+	</div>
+	<!-- /.blog-post -->
+
+</article>

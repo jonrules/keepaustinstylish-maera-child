@@ -1,0 +1,13 @@
+{% set preview_readmode = theme.theme_mod('post_excerpt_link_text', __( 'Continued', 'maera_bs' )) %}
+{% set preview_length   = theme.theme_mod('post_excerpt_length', 55) %}
+
+{% if theme.theme_mod('blog_post_mode', 'excerpt') == 'full' %}
+	{{ post.content }}
+{% else %}
+	<div class="entry-summary lib-item" itemprop="description">
+		<div class="lib-panel">
+			{% do action( 'maera-child/post-preview', post ) %}
+		</div>
+		<div class="clearfix"></div>
+	</div>
+{% endif %}
