@@ -100,10 +100,10 @@ function maera_child_posts_peek_html() {
 	
 	echo '<div class="row footer footer-links">';
 	echo '<div class="col-xs-6">';
-	echo '<a href="' . site_url( '/contact-us' ) . '">Contact Us</a>';
+	echo '<a href="' . site_url( '/contact' ) . '">Contact</a>';
 	echo '</div>';
 	echo '<div class="col-xs-6">';
-	echo '<a href="' . site_url( '/about-us' ) . '">About Us</a>';
+	echo '<a href="' . site_url( '/about' ) . '">About</a>';
 	echo '</div>';
 	echo '</div>';
 	
