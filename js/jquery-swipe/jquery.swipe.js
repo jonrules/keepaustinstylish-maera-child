@@ -1,9 +1,18 @@
+/*!
+ * jQuery Swipe - A jQuery plugin that adds swipe functionality to elements
+ *
+ * Copyright (c) 2015 Jonathan Baltazar
+ *
+ * Licensed under the MIT license http://www.opensource.org/licenses/mit-license.php
+ *
+ * https://github.com/jonrules/jquery-swipe
+ *
+ * Version 1.0.0
+ *
+ */
 (function($) {
 
 	$.fn.swipe = function (onSwipe, minDx, minDy) {
-		var swipeX = 0;
-		var swipeY = 0;
-		var swipeTime = 0;
 		var minSwipeTime = 500;
 		if (minDx == null) {
 			minDx = 30;
@@ -13,6 +22,9 @@
 		}
 		
 		this.each(function () {
+			var swipeX = 0;
+			var swipeY = 0;
+			var swipeTime = 0;
 
 			$(this).bind('swipe', onSwipe);
 			

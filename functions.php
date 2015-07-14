@@ -12,7 +12,7 @@ add_theme_support( 'infinite-scroll', array(
 
 function maera_child_scripts() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-	wp_enqueue_script( 'swipe', get_stylesheet_directory_uri() . '/js/jquery.swipe.js', array( 'jquery' ) );
+	wp_enqueue_script( 'swipe', get_stylesheet_directory_uri() . '/js/jquery-swipe/jquery.swipe.js', array( 'jquery' ) );
 	wp_enqueue_script( 'jquery-posts-peek', get_stylesheet_directory_uri() . '/js/jquery.posts-peek.js', array( 'jquery', 'swipe' ) );
 }
 add_action( 'wp_enqueue_scripts', 'maera_child_scripts' );
@@ -83,6 +83,12 @@ function maera_child_get_post_excerpt( $post_id, $charlength ) {
 
 	return $excerpt;
 }
+
+function maera_child_mime_types( $mimes ) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'maera_child_mime_types');
 
 function maera_child_print( $var ) {
 	var_dump( $var );
