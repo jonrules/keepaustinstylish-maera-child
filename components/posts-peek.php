@@ -9,7 +9,7 @@ function maera_child_posts_peek_html() {
 	echo '<a href="' . get_bloginfo('url') . '" class="site-name-logo navbar-brand">';
 	$site_logo = get_option( 'site_logo', false );
 	if ( $site_logo ) {
-		echo sprintf( '<img id="brand-logo" src="%s" alt="Keep Austin Stylish" />', esc_attr( $site_logo['url'] ) );
+		echo sprintf( '<img id="posts-peek-brand-logo" src="%s" alt="Keep Austin Stylish" />', esc_attr( $site_logo['url'] ) );
 	} else {
 		echo esc_html( get_bloginfo( 'name' ) );
 	}
