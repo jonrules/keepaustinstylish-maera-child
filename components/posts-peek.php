@@ -7,7 +7,8 @@ function maera_child_posts_peek_html() {
 	echo '<div class="navbar-header">';
 	echo '<button type="button" id="posts-peek-close" class="navbar-toggle"><span class="glyphicon glyphicon-remove"></span></button>';
 	echo '<a href="' . get_bloginfo('url') . '" class="site-name-logo navbar-brand">';
-	echo esc_html( get_bloginfo( 'name' ) );
+	$site_logo = get_option( 'site_logo', false );
+	echo sprintf( '<img id="brand-logo" src="%s" alt="Keep Austin Stylish" />', esc_attr( wp_get_attachment_image_src( $site_logo, 'full' ) ) );
 	echo '</a>';
 	echo '</div>';
 	echo '</div>';
