@@ -75,6 +75,12 @@ Text Domain:		maera-child
 	display: block;
 }
 
+#posts-peek-nav #posts-peek-brand-logo {
+	max-width: none;
+	max-height: none;
+	height: 28px;
+}
+
 /* Posts Layout Results Styles */
 
 .lib-panel {
