@@ -9,7 +9,7 @@
 						<div class="post-meta">
 							<p>
 								<img class="profile-pic"> <span class="hidden-xs">Posted
-									On </span>April 18, 2015
+									On </span><?php echo date_i18n( get_option('date_format'), strtotime( $post->post_date ) ); ?>
 							</p>
 						</div>
 					</div>
