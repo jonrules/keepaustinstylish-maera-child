@@ -1,0 +1,27 @@
+{#<?php#}
+{% extends "main.twig" %}
+{% block content %}
+
+<div class="panel panel-default author-profile">
+	<div class="panel-heading">
+		<div class="author-avatar">{{function("get_avatar", author.ID, 256)}}</div>
+	</div>
+	<div class="panel-body">
+		<h1 class="author-name">
+			{{author.name}}
+		</h1>
+		<div class="author-bio">
+			{{function("get_user_meta", author.ID, "description", true)}}
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		{% for post in posts %}
+			{% include ["content-"~post.post_type~".twig", "content.twig"] %}
+		{% endfor %}
+	</div>
+</div>
+
+{% endblock %}

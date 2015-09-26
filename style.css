@@ -246,3 +246,15 @@ ul.post-hashtags {
 	background: url('images/infinite-scroll-loading.svg') center bottom no-repeat;
 	background-size: 60px 60px;
 }
+
+body.author main > h1 {
+	display: none;
+}
+
+body.author .author-profile {
+	text-align: center;
+}
+
+body.author .author-profile .author-avatar img.avatar {
+	border-radius: 50%;
+}
