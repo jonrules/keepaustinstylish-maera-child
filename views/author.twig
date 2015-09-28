@@ -2,26 +2,25 @@
 {% extends "main.twig" %}
 {% block content %}
 
-<div class="panel panel-default author-profile">
-	<div class="panel-heading">
-		<div class="author-avatar">{{function("get_avatar", author.ID, 256)}}</div>
-	</div>
-	<div class="panel-body">
+<div class="author-profile">
+	<div class="author-avatar">{{function("get_avatar", author.ID, 128)}}</div>
+	<div class="author-fields">
 		<h1 class="author-name">
 			{{author.name}}
 		</h1>
+		<div class="author-social-networks">
+			<a href="https://twitter.com/{{function("get_user_meta", author.ID, "twitter", true)}}" class="twitter-link">
+				@{{function("get_user_meta", author.ID, "twitter", true)}}
+			</a>
+		</div>
 		<div class="author-bio">
 			{{function("get_user_meta", author.ID, "description", true)}}
 		</div>
 	</div>
 </div>
 
-<div class="panel panel-default">
-	<div class="panel-body">
-		{% for post in posts %}
-			{% include ["content-"~post.post_type~".twig", "content.twig"] %}
-		{% endfor %}
-	</div>
-</div>
+{% for post in posts %}
+	{% include ["content-"~post.post_type~".twig", "content.twig"] %}
+{% endfor %}
 
 {% endblock %}
