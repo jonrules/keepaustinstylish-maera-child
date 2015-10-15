@@ -6,7 +6,7 @@
 	</div><!-- end col -->
 	<div class="col-xs-7 col-sm-8 no-padding">
 		<div class="lib-row lib-header">
-			<h2><?php echo esc_html( $post->post_title ); ?></h2>
+			<h2><?php echo $post->post_title; ?></h2>
 		</div>
 		<div class="lib-row lib-hashtags">
 			<div class="white-right"></div>
